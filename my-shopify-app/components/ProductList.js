@@ -14,7 +14,6 @@ const ProductList = ({ products }) => {
           <p className='product-description'>{node.description}</p>
           <p className='product-price'>
             {node.priceRange.maxVariantPrice.amount}
-            {node.priceRange.maxVariantPrice.currencyCode}
           </p>
         </div>
       ))}

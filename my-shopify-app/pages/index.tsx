@@ -1,7 +1,6 @@
 import React from 'react';
 import ProductList from '../components/ProductList';
 import { GetStaticProps } from 'next';
-import styles from '../styles/Alex.module.css';
 
 interface Product {
   node: {
@@ -82,7 +81,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
       props: {
         products,
       },
-      revalidate: 60, // Regenerate the page every 60 seconds
+      revalidate: 10, // Regenerate the page every 60 seconds
     };
   } catch (error) {
     console.error('Error fetching products:', error);
