@@ -1,13 +1,17 @@
 import React from 'react';
+import { Product } from './types';
 
-const ProductList = ({ products }) => {
+interface ProductListProps  {
+  products: Product[];
+}
+const ProductList = ({ products }: ProductListProps) => {
   return (
     <div className='products'>
       {products.map(({ node }) => (
         <div key={node.id} className='product-item'>
           <img
             src={node.images.edges[0]?.node.originalSrc}
-            alt={node.title}
+            alt={node.name}
             className='product-image'
           />
           <h3 className='product-title'>{node.title}</h3>
