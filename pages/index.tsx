@@ -1,27 +1,7 @@
 import React from 'react';
-import ProductList from '../components/ProductList';
+import ProductList from '../components/ProductList/ProductList';
 import { GetStaticProps } from 'next';
-
-interface Product {
-  node: {
-    id: string;
-    title: string;
-    description: string;
-    images: {
-      edges: {
-        node: {
-          originalSrc: string;
-        };
-      }[];
-    };
-    priceRange: {
-      maxVariantPrice: {
-        amount: string;
-        currencyCode: string;
-      };
-    };
-  };
-}
+import { Product } from '@/components/ProductList/types';
 
 interface HomePageProps {
   products: Product[];
