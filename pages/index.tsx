@@ -1,8 +1,7 @@
 import React from 'react';
-import ProductList from '../components/productlist/ProductList';
+import ProductList from '../components/ProductList/ProductList';
 import { GetStaticProps } from 'next';
-import { Product } from '@/components/productlist/types';
-
+import { Product } from '@/components/ProductList/types';
 
 interface HomePageProps {
   products: Product[];
